@@ -1,0 +1,37 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.blur-background {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.blur-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  backdrop-filter: blur(10px); /* 应用毛玻璃效果 */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* 可选：给内容添加一些背景色以增强可读性 */
+.content {
+  background-color: rgba(0, 0, 0, 0.5);
+}

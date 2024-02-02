@@ -1,0 +1,34 @@
+/* 设置页面全局字体和字体大小 */
+body {
+  font-family: Arial, sans-serif; /* 使用Arial字体，如果不可用则使用sans-serif字体作为备选 */
+  font-size: 16px; /* 设置基本字体大小为16像素 */
+  line-height: 1.5; /* 设置行高为字体大小的1.5倍，以提高可读性 */
+}
+
+/* 设定联系按钮样式 */
+.contact {
+  font-weight: bold; /* 使文字加粗显示 */
+  font-size: 24px; /* 设置按钮文字大小为24像素 */
+  color: #333; /* 设置按钮文字颜色为深灰色 */
+  margin-bottom: 20px; /* 在按钮下方留出20像素的空白间隔 */
+  margin-left: 20px;
+}
+
+/* 设定签名列表样式 */
+.signature {
+  margin-top: 20px; /* 在签名列表上方留出20像素的空白间隔 */
+  margin-left: 20px;
+}
+
+.signature a {
+  color: #333; /* 设置链接文字颜色为深灰色 */
+  text-decoration: none; /* 去除链接的下划线效果 */
+}
+
+.signature a:hover {
+  text-decoration: underline; /* 鼠标悬停时显示下划线效果 */
+}
+
+.signature p {
+  margin-bottom: 10px; /* 在段落下方留出10像素的空白间隔 */
+}

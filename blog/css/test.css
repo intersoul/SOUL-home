@@ -1,0 +1,187 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.jiajiazi {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  pointer-events: none;
+}
+.content1 {
+  opacity: 0; /* 默认不可见 */
+  pointer-events: none; /* 防止交互 */
+  transition: opacity 0.5s ease; /* 可选：添加平滑过渡效果 */
+  position: fixed; /* 使用fixed代替absolute，确保覆盖整个视窗 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex; /* 使用flex布局 */
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  backdrop-filter: blur(10px); /* 应用毛玻璃效果 */
+  text-align: center;
+  color: white;
+  border-radius: 0; /* 因为要覆盖整个页面，所以不需要圆角 */
+}
+.center {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transition: opacity 1s ease;
+}
+
+#time {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
+  color: aliceblue;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.search-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 20px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.search-box input[type="text"],
+.search-box button {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.search-box input[type="text"] {
+  padding: 5px;
+  font-size: 16px;
+}
+
+.search-box button {
+  padding: 5px 10px;
+  font-size: 16px;
+}
+
+.signature {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 20px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.signature p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.show {
+  display: block;
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+
+.buttons {
+  position: absolute; /* 绝对定位，相对于最近的已定位（非static）祖先元素 */
+  top: 50%; /* 距离包含块顶部的距离为50%，用于垂直居中 */
+  left: 50%; /* 距离包含块左边的距离为50%，用于水平居中 */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* 使用transform进行平移，实现准确居中效果 */
+  /* backdrop-filter: blur(10px); */ /* 注释掉的背景模糊效果，可以为背景元素添加模糊滤镜 */
+  /* background-color: rgba(255, 255, 255, 0.5); */ /* 注释掉的半透明白色背景 */
+  padding: 10px; /* 内边距为10px，为内部元素与边框之间提供空间 */
+  border-radius: 5px; /* 边框圆角为5px，提供圆润的边角 */
+
+  opacity: 1; /* 元素不透明度设置为1，完全不透明。注释中提到设置为0，似乎是个错误 */
+  transition: opacity 1s ease; /* 过渡效果，使opacity属性的变化在1秒内平滑过渡，采用“ease”缓动函数 */
+  text-align: center; /* 文本居中显示，影响按钮内的文字对齐方式 */
+  /* 其他样式如背景色、毛玻璃效果、内边距和圆角已在HTML内直接定义 */
+}
+
+.buttons button {
+  margin: 5px; /* 按钮间距 */
+  padding: 15px 15px; /* 按钮内边距 */
+  font-size: 16px; /* 字体大小 */
+  background-color: transparent; /* 背景透明transparent */
+  border: 2px solid white; /* 白色边框 */
+  border-radius: 5px; /* 圆角 */
+  cursor: pointer; /* 鼠标指针变为手型 */
+  outline: none; /* 去除焦点时的轮廓线 */
+}
+button {
+  background-color: black; /* 设置按钮的背景颜色为黑色 */
+  color: white; /* 设置按钮内文字的颜色为白色 */
+  border: none; /* 移除按钮的边框 */
+  padding: 10px; /* 在按钮内部周围添加10像素的填充，使内容与边缘保持一定距离 */
+  cursor: pointer; /* 当鼠标悬停在按钮上时，将鼠标光标变为手形图标，表示可点击 */
+  /* 矛盾的属性定义，`display: flex;` 与 `display: inline-block;` 同时存在会导致后者覆盖前者 */
+  display: inline-block; /* 使按钮自身大小根据内容调整，但这与`display: flex;`冲突，应选择其一 */
+}
+
+button img {
+  width: 50px; /* 图片尺寸 */
+  height: 50px;
+  margin-bottom: 5px; /* 图片与文字之间的间距 */
+}
+button span {
+  display: block; /* 使文本在图标下方显示 */
+  color: white; /* 文本颜色 */
+  margin-top: 5px; /* 文本与按钮之间的距离 */
+}
+.button-container {
+  display: flex;
+  flex-direction: column; /* 使按钮和文字垂直排列 */
+  align-items: center; /* 居中对齐 */
+  text-align: center; /* 文字居中 */
+}
+
+.button-link {
+  text-decoration: none; /* 去除链接下划线 */
+  color: inherit; /* 链接颜色继承父元素 */
+}
+#time,
+.search-box,
+.buttons {
+  transition: opacity 1s ease; /* 添加过渡效果 */
+  opacity: 1; /* 初始不透明度设置为1 */
+}
+.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.hidden {
+  opacity: 0; /* 隐藏时不透明度设置为0 */
+  pointer-events: none; /* 防止隐藏元素被点击 */
+}

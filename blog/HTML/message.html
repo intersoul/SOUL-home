@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>个人介绍</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/message.css" />
+  </head>
+
+  <body>
+    <div id="bigbox">
+      <div id="banner">
+        <img src="/picture/7.jpg" alt="" />
+      </div>
+      <nav>
+        <a href="index.html">首页</a>
+        <a href="category.html">短文</a>
+        <a class="dangqian" href="message.html">留言板</a>
+        <a href="about.html">About</a>
+      </nav>
+      <div id="main">
+        <h2>热爱生活</h2>
+        <body>
+          <h1>留言板</h1>
+          <form id="messageForm">
+            <input
+              type="text"
+              id="nameInput"
+              placeholder="请输入您的姓名"
+              required
+            />
+            <textarea
+              id="messageInput"
+              placeholder="请输入留言"
+              required
+            ></textarea>
+            <button type="submit">提交留言</button>
+          </form>
+          <ul id="messages"></ul>
+          <script src="/js/message.js"></script>
+        </body>
+
+        <!-- <img src="/picture/3.jpg" alt=""> -->
+      </div>
+
+      <footer>
+        <p>版权所有©*****</p>
+      </footer>
+    </div>
+  </body>
+</html>

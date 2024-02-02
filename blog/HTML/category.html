@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>个人介绍</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+
+  <body>
+    <div id="bigbox">
+      <div id="banner">
+        <img src="/picture/7.jpg" alt="" />
+      </div>
+      <nav>
+        <a href="index.html">首页</a>
+        <a class="dangqian" href="category.html">短文</a>
+        <a href="message.html">留言板</a>
+        <a href="about.html">About</a>
+      </nav>
+      <div id="main">
+        <h2>热爱生活</h2>
+        <body>
+          <button class="button" onclick="showContent('c_cpp')">C/C++</button>
+          <button class="button" onclick="showContent('python')">Python</button>
+          <button class="button" onclick="showContent('pcb')">PCB</button>
+          <button class="button" onclick="showContent('open_source')">
+            开源
+          </button>
+
+          <div id="content">
+            <!-- 初始显示的内容 -->
+          </div>
+
+          <script src="/js/category.js"></script>
+        </body>
+        <!-- <img src="/picture/3.jpg" alt=""> -->
+      </div>
+
+      <footer>
+        <p>版权所有©*****</p>
+      </footer>
+    </div>
+  </body>
+</html>
